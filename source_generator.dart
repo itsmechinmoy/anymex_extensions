@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'dart:developer';
 import 'dart:io';
-import 'dart/anime/anime_source_list.dart';
 import 'model/source.dart';
 
 void main() {
