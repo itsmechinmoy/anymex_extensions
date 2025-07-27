@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   build:
@@ -16,7 +17,7 @@ jobs:
       - name: Setup Dart
         uses: dart-lang/setup-dart@9a04e6d73cca37bd455e0608d7e5092f881fd603
 
-      - name: Generage
+      - name: Generate
         run: |
           dart run source_generator.dart
 
@@ -31,4 +32,3 @@ jobs:
           else
             git commit -m "Update extensions"
             git push origin main --force
-          fi
